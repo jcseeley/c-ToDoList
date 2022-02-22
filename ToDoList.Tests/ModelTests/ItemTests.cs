@@ -6,8 +6,13 @@ namespace ToDoList.Tests
   [TestClass]
   public class ItemTests
   {
+    Item newItem = new Item();
 
-    // Test methods will go here.
-
+    [TestMethod]
+    public void ItemConstructor_CreatesInstanceOfItem_Item()
+    {
+      Assert.AreEqual(typeof(Item), newItem.GetType()); 
+    }
+    
   }
 }
