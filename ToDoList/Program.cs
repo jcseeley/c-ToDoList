@@ -6,7 +6,7 @@ namespace ToDoList
 {
   public class Program
   {
-    public static List<Item> newList = new List<Item> {  };
+    public static List<Item> newList = new List<Item> {};
     
     public static void Main()
     {
