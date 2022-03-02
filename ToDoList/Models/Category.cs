@@ -25,5 +25,10 @@ namespace ToDoList.Models
     {
       _instances.Clear();
     }
+
+    public static Category Find(int searchId)
+    {
+      return _instances[searchId-1];
+    }
   }
 }
