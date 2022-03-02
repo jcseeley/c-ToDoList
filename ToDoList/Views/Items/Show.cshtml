@@ -9,10 +9,11 @@
     <div class="container">
       <h1>Item Details: </h1>
 
-      <h2>@Model.Description</h2>
+      <h2>@Model["item"].Description</h2>
+      <h3>Category: @Model["category"].Name</h3>
 
-      <a href='/items/new'>Add Another Item</a><br>
-      <a href='/items'>View All Items</a>
+      <a href='/categories/@Model["category"].Id/items/new'>Add Another Item</a><br>
+      <a href='/categories'>View All Items</a>
     </div>
   </body>
 </html>

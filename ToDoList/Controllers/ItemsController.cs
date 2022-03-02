@@ -21,7 +21,7 @@ namespace ToDoList.Controllers
     }
 
     [HttpGet("/categories/{categoryId}/items/{itemId}")]
-  public ActionResult Show(int categoryId, int itemId)
+    public ActionResult Show(int categoryId, int itemId)
     {
       Item item = Item.Find(itemId);
       Category category = Category.Find(categoryId);
