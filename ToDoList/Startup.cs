@@ -27,6 +27,7 @@ namespace ToDoList
     {
       app.UseDeveloperExceptionPage();
       app.UseRouting();
+      app.UseStaticFiles();
 
       app.UseEndpoints(routes =>
       {
@@ -35,7 +36,7 @@ namespace ToDoList
 
       app.Run(async (context) =>
       {
-        await context.Response.WriteAsync("Hello World!");
+        await context.Response.WriteAsync("Well that didn't work...");
       });
     }
   }
