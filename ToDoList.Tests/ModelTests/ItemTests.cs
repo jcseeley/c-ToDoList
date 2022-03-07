@@ -19,32 +19,32 @@ namespace ToDoList.Tests
       DBConfiguration.ConnectionString = "server=localhost;user id=root;password=epicodus;port=3306;database=Dump20220306_test;";
     }
     
-    // [TestMethod]
-    // public void ItemConstructor_CreatesInstanceOfItem_Item()
-    // {
-    //   Item newItem = new Item("test");
-    //   Assert.AreEqual(typeof(Item), newItem.GetType()); 
-    // }
+    [TestMethod]
+    public void ItemConstructor_CreatesInstanceOfItem_Item()
+    {
+      Item newItem = new Item("test");
+      Assert.AreEqual(typeof(Item), newItem.GetType()); 
+    }
 
-    // [TestMethod]
-    // public void GetDescription_ReturnsDescription_String()
-    // {
-    //   string description = "Walk the dog.";
-    //   Item newItem = new Item(description);
-    //   string result = newItem.Description;
-    //   Assert.AreEqual(description, result); 
-    // }
+    [TestMethod]
+    public void GetDescription_ReturnsDescription_String()
+    {
+      string description = "Walk the dog.";
+      Item newItem = new Item(description);
+      string result = newItem.Description;
+      Assert.AreEqual(description, result); 
+    }
 
-    // [TestMethod]
-    // public void SetDescription_SetDescription_String()
-    // {
-    //   string description = "Walk the dog.";
-    //   Item newItem = new Item(description);
-    //   string updatedDescription = "Do the dishes.";
-    //   newItem.Description = updatedDescription;
-    //   string result = newItem.Description;
-    //   Assert.AreEqual(updatedDescription, result); 
-    // }
+    [TestMethod]
+    public void SetDescription_SetDescription_String()
+    {
+      string description = "Walk the dog.";
+      Item newItem = new Item(description);
+      string updatedDescription = "Do the dishes.";
+      newItem.Description = updatedDescription;
+      string result = newItem.Description;
+      Assert.AreEqual(updatedDescription, result); 
+    }
 
     [TestMethod]
     public void GetAll_ReturnsEmptyListFromDatabase_ItemList()
@@ -68,14 +68,14 @@ namespace ToDoList.Tests
       CollectionAssert.AreEqual(newList, result);
     }
 
-    // [TestMethod]
-    // public void GetId_ItemsInstantiateWithAnIdAndGetterReturns_Int()
-    // {
-    //   string description = "Walk the dog.";
-    //   Item newItem = new Item(description);
-    //   int result = newItem.Id;
-    //   Assert.AreEqual(1, result);
-    // }
+    [TestMethod]
+    public void GetId_ItemsInstantiateWithAnIdAndGetterReturns_Int()
+    {
+      string description = "Walk the dog.";
+      Item newItem = new Item(description);
+      int result = newItem.Id;
+      Assert.AreEqual(1, result);
+    }
 
     [TestMethod]
     public void Find_ReturnsCorrectItemFromDatabase_Item()
