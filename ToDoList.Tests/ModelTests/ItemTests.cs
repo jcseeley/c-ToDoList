@@ -74,7 +74,7 @@ namespace ToDoList.Tests
       string description = "Walk the dog.";
       Item newItem = new Item(description);
       int result = newItem.Id;
-      Assert.AreEqual(1, result);
+      Assert.AreEqual(0, result);
     }
 
     [TestMethod]
