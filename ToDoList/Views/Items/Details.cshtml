@@ -7,4 +7,5 @@
 <h2>Item Details</h2>
 <hr />
 <h3>@Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)<h3>
+<h3>@Html.ActionLink("Edit Item", "Edit", new { id = Model.ItemId })</h3>
 <h3>@Html.ActionLink("Back To List", "Index")</h3>
