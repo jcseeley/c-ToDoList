@@ -6,15 +6,14 @@
 
 <h2>Edit</h2>
 
-<h4>Edit This Category: @Html.DisplayFor(model => model.Name)</h4>
+<h3>Edit This Category: @Html.DisplayFor(model => model.Name)</h3>
 
 @using (Html.BeginForm())
 {
     @Html.HiddenFor(model => model.CategoryId)
-
     @Html.LabelFor(model => model.Name)
     @Html.EditorFor(model => model.Name)
-
     <input type="submit" value="Save" />
 }
-<h3>@Html.ActionLink("Back To Categories", "Index")</h3>
+
+<h4>@Html.ActionLink("Back To Categories", "Index")</h4>

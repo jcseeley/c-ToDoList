@@ -7,6 +7,7 @@
 <h2>Item Details</h2>
 <hr />
 <h3>@Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)<h3>
-<h2>@Html.ActionLink("Edit Item", "Edit", new { id = Model.ItemId })</h2>
-<h2>@Html.ActionLink("Delete Item", "Delete", new { id = Model.ItemId })</h2>
-<h3>@Html.ActionLink("Back To List", "Index")</h3>
+<h3>@Html.ActionLink("Edit Item", "Edit", new { id = Model.ItemId })</h3>
+<h3>@Html.ActionLink("Delete Item", "Delete", new { id = Model.ItemId })</h3>
+
+<h4>@Html.ActionLink("Back To List", "Index")</h4>
