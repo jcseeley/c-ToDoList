@@ -17,10 +17,12 @@ namespace ToDoList.Controllers
     public ActionResult Index()
     {
       List<Category> model = _db.Categories.ToList();
+      ViewBag.PageTitle = "Categories";
       return View(model);
     }
     public ActionResult Create()
     {
+      ViewBag.PageTitle = "Add Category";
       return View();
     }
 
@@ -35,12 +37,14 @@ namespace ToDoList.Controllers
     public ActionResult Details(int id)
     {
       Category thisCategory = _db.Categories.FirstOrDefault(category => category.CategoryId == id);
+      ViewBag.PageTitle = "Category Details";
       return View(thisCategory);
     }
 
     public ActionResult Edit(int id)
     {
       var thisCategory = _db.Categories.FirstOrDefault(category => category.CategoryId == id);
+      ViewBag.PageTitle = "Edit Category";
       return View(thisCategory);
     }
 
@@ -55,6 +59,7 @@ namespace ToDoList.Controllers
     public ActionResult Delete(int id)
     {
       var thisCategory = _db.Categories.FirstOrDefault(category => category.CategoryId == id);
+      ViewBag.PageTitle = "Delete Category";
       return View(thisCategory);
     }
 
