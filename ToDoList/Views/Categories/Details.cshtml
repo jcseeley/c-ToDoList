@@ -1,14 +1,27 @@
-@* @{
+@{
   Layout = "_Layout";
 }
 
 @model ToDoList.Models.Category
 
-<h2>Category Details</h2>
+<h2>Category Details:</h2>
 <hr />
 <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)<h3><br>
+
+@if(@Model.JoinEntities.Count == 0)
+{
+  <h3>This Category doesn't contain any items.</h3>
+}
+else
+{
+  <h3>Items in this Category:</h3>
+  @foreach (var join in Model.JoinEntities)
+  {
+    <h4>@join.Item.Description</h4>
+  }
+}
 <h5>@Html.ActionLink("Edit Category", "Edit", new { id = Model.CategoryId })</h5>
 <h5>@Html.ActionLink("Delete Category", "Delete", new { id = Model.CategoryId })</h5><br>
 
 <h4>@Html.ActionLink("Back To Categories", "Index")</h4>
-<h4>@Html.ActionLink("Home", "Index", "Home")</h4> *@
+<h4>@Html.ActionLink("Home", "Index", "Home")</h4>

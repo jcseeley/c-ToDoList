@@ -4,16 +4,13 @@
 
 @model ToDoList.Models.Item
 
-<h2>Edit</h2>
+<h2>Add a Category</h2>
 
-<h3>Edit This Task: @Html.DisplayFor(model => model.Description)</h3>
+<h4>Add a Category to this Task: @Html.DisplayFor(model => model.Description)</h4>
 
 @using (Html.BeginForm())
 {
   @Html.HiddenFor(model => model.ItemId)
-
-  @Html.LabelFor(model => model.Description)
-  @Html.EditorFor(model => model.Description)
 
   @Html.Label("Select Category")
   @Html.DropDownList("CategoryId")
@@ -21,4 +18,4 @@
   <input type="submit" value="Save" />
 }
 
-<h4>@Html.ActionLink("Back To List", "Index")</h4>
+<h3>@Html.ActionLink("Back to Items", "Index")</h3>
