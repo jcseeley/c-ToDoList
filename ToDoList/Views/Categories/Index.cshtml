@@ -1,18 +1,16 @@
-@{
+@* @{
   Layout = "_Layout";
 }
 
 @using ToDoList.Models;
 @model List<ToDoList.Models.Category>;
 
-<h2>Categories</h2>
+<h2>Categories:</h2>
 
-<ul>
   @foreach(Category category in Model)
   {
-    <li>@Html.ActionLink($"{category.Name}", "Details", new { id = category.CategoryId })</li>
+    <h3>- @Html.ActionLink($"{category.Name}", "Details", new { id = category.CategoryId })</h3>
   }
-</ul>
-
+<br>
 <h4>@Html.ActionLink("Add New Category", "Create")</h4>
-<h4>@Html.ActionLink("Home", "Index", "Home")</h4>
+<h4>@Html.ActionLink("Home", "Index", "Home")</h4> *@

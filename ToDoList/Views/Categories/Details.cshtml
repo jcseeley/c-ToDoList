@@ -1,4 +1,4 @@
-@{
+@* @{
   Layout = "_Layout";
 }
 
@@ -6,9 +6,9 @@
 
 <h2>Category Details</h2>
 <hr />
-<h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)<h3>
-<h3>@Html.ActionLink("Edit Category", "Edit", new { id = Model.CategoryId })</h3>
-<h3>@Html.ActionLink("Delete Category", "Delete", new { id = Model.CategoryId })</h3>
+<h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)<h3><br>
+<h5>@Html.ActionLink("Edit Category", "Edit", new { id = Model.CategoryId })</h5>
+<h5>@Html.ActionLink("Delete Category", "Delete", new { id = Model.CategoryId })</h5><br>
 
 <h4>@Html.ActionLink("Back To Categories", "Index")</h4>
-<h4>@Html.ActionLink("Home", "Index", "Home")</h4>
+<h4>@Html.ActionLink("Home", "Index", "Home")</h4> *@
