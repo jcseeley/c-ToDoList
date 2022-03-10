@@ -4,7 +4,7 @@
 
 @model ToDoList.Models.Item
 
-<h2>Item Details</h2>
+<h2>Item Details:</h2>
 <hr />
 <h3>@Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)<h3>
 @if(@Model.JoinEntities.Count == 0)
@@ -13,23 +13,20 @@
 }
 else
 {
-  <h3>Categories This Item Belongs To:</h3>
+  <h4>Categories:</h4>
   @foreach (var join in Model.JoinEntities)
   {
     <h4>@join.Category.Name</h4>
+    @using (Html.BeginForm("DeleteCategory", "Items"))
+    {
+      @Html.Hidden("joinId", @join.CategoryItemId)
+      <input type="submit" value="Delete"/>
+    }
   }
 }
-@foreach (var join in Model.JoinEntities)
-{
-  <h4>@join.Category.Name</h4>
-  @using (Html.BeginForm("DeleteCategory", "Items"))
-  {
-    @Html.Hidden("joinId", @join.CategoryItemId)
-    <input type="submit" value="Delete"/>
-  }
-}
-<h3>@Html.ActionLink("Edit Item", "Edit", new { id = Model.ItemId })</h3>
-<h3>@Html.ActionLink("Delete Item", "Delete", new { id = Model.ItemId })</h3>
-<h3>@Html.ActionLink("Add a Category", "AddCategory", new { id = Model.ItemId })</h3>
+<hr />
+<h5>@Html.ActionLink("Edit Item", "Edit", new { id = Model.ItemId })</h5>
+<h5>@Html.ActionLink("Delete Item", "Delete", new { id = Model.ItemId })</h5>
+<h5>@Html.ActionLink("Add a Category", "AddCategory", new { id = Model.ItemId })</h5>
 
 <h4>@Html.ActionLink("Back To List", "Index")</h4>

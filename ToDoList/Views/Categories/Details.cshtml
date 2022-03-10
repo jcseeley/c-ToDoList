@@ -6,11 +6,13 @@
 
 <h2>Category Details:</h2>
 <hr />
-<h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)<h3><br>
+<h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)<h3>
+<hr />
 
 @if(@Model.JoinEntities.Count == 0)
 {
-  <h3>This Category doesn't contain any items.</h3>
+  <h4>This Category doesn't contain any items.</h4>
+  <hr />
 }
 else
 {
@@ -18,6 +20,7 @@ else
   @foreach (var join in Model.JoinEntities)
   {
     <h4>@join.Item.Description</h4>
+    <hr />
   }
 }
 <h5>@Html.ActionLink("Edit Category", "Edit", new { id = Model.CategoryId })</h5>
